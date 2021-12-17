@@ -362,6 +362,15 @@ class RPCClient extends EventEmitter {
   }
 
   /**
+   * Get the current voice channel the client is in
+   * @returns {Promise}
+   */
+  getSelectedVoiceChannel() {
+    console.log("test");
+    return this.request(RPCCommands.GET_SELECTED_VOICE_CHANNEL);
+  }
+
+  /**
    * Move the user to a text channel
    * @param {Snowflake} id ID of the voice channel
    * @param {Object} [options] Options
